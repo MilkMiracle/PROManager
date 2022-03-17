@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/CreateNewProfile.gd" type="Script" id=2]
+
+[node name="CreateNewProfile" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.870588 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MC" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 350
+custom_constants/margin_left = 350
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBC" type="VBoxContainer" parent="MC"]
+margin_left = 350.0
+margin_right = 674.0
+margin_bottom = 768.0
+alignment = 1
+
+[node name="ProfileName" type="Label" parent="MC/VBC"]
+margin_top = 174.0
+margin_right = 324.0
+margin_bottom = 213.0
+text = "Profile name"
+align = 1
+valign = 1
+
+[node name="username" type="LineEdit" parent="MC/VBC"]
+margin_top = 221.0
+margin_right = 324.0
+margin_bottom = 280.0
+text = "Potatoes"
+max_length = 15
+context_menu_enabled = false
+
+[node name="HS" type="HSeparator" parent="MC/VBC"]
+margin_top = 288.0
+margin_right = 324.0
+margin_bottom = 323.0
+custom_constants/separation = 35
+
+[node name="Server" type="Label" parent="MC/VBC"]
+margin_top = 331.0
+margin_right = 324.0
+margin_bottom = 370.0
+text = "Server"
+align = 1
+valign = 1
+
+[node name="HBC" type="HBoxContainer" parent="MC/VBC"]
+margin_top = 378.0
+margin_right = 324.0
+margin_bottom = 433.0
+alignment = 1
+
+[node name="Silver" type="CheckBox" parent="MC/VBC/HBC"]
+margin_left = 29.0
+margin_right = 164.0
+margin_bottom = 55.0
+focus_mode = 0
+disabled = true
+pressed = true
+enabled_focus_mode = 0
+text = "Silver"
+
+[node name="Gold" type="CheckBox" parent="MC/VBC/HBC"]
+margin_left = 172.0
+margin_right = 295.0
+margin_bottom = 55.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Gold"
+
+[node name="HS2" type="HSeparator" parent="MC/VBC"]
+margin_top = 441.0
+margin_right = 324.0
+margin_bottom = 476.0
+custom_constants/separation = 35
+
+[node name="Create" type="Button" parent="MC/VBC"]
+margin_top = 484.0
+margin_right = 324.0
+margin_bottom = 535.0
+text = "CREATE"
+
+[node name="Back" type="Button" parent="MC/VBC"]
+margin_top = 543.0
+margin_right = 324.0
+margin_bottom = 594.0
+text = "BACK"
+
+[connection signal="pressed" from="MC/VBC/HBC/Silver" to="." method="_on_Silver_pressed"]
+[connection signal="pressed" from="MC/VBC/HBC/Gold" to="." method="_on_Gold_pressed"]
+[connection signal="pressed" from="MC/VBC/Create" to="." method="_on_Create_pressed"]
+[connection signal="pressed" from="MC/VBC/Back" to="." method="_on_Back_pressed"]

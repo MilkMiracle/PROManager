@@ -1,0 +1,182 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/AreaCard.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.588235 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.882353, 0.890196, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0588235, 0.890196, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0588235, 0.890196, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0588235, 0.890196, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0588235, 0.890196, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.0588235, 0.890196, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.890196, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+anti_aliasing_size = 2.0
+
+[node name="AreaCard" type="Panel"]
+margin_right = 460.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 460, 100 )
+mouse_filter = 1
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+Action = "Dig"
+
+[node name="VBC" type="VBoxContainer" parent="."]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 447.0
+margin_bottom = 99.0
+
+[node name="Area" type="Label" parent="VBC"]
+margin_right = 436.0
+margin_bottom = 39.0
+text = "Route 1"
+
+[node name="HBC" type="HBoxContainer" parent="VBC"]
+margin_top = 47.0
+margin_right = 436.0
+margin_bottom = 86.0
+
+[node name="Cooldown" type="Label" parent="VBC/HBC"]
+margin_right = 130.0
+margin_bottom = 39.0
+text = "72:00:00"
+
+[node name="VS" type="VSeparator" parent="VBC/HBC"]
+margin_left = 138.0
+margin_right = 294.0
+margin_bottom = 39.0
+size_flags_horizontal = 3
+
+[node name="Edit" type="Button" parent="VBC/HBC"]
+margin_left = 302.0
+margin_right = 335.0
+margin_bottom = 39.0
+focus_mode = 0
+mouse_filter = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+enabled_focus_mode = 0
+text = "W"
+
+[node name="VS2" type="VSeparator" parent="VBC/HBC"]
+margin_left = 343.0
+margin_right = 351.0
+margin_bottom = 39.0
+
+[node name="Done" type="Button" parent="VBC/HBC"]
+margin_left = 359.0
+margin_right = 436.0
+margin_bottom = 39.0
+focus_mode = 0
+mouse_filter = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+enabled_focus_mode = 0
+text = "Done"
+
+[node name="Reset" type="Button" parent="VBC/HBC"]
+visible = false
+margin_left = 355.0
+margin_right = 436.0
+margin_bottom = 39.0
+focus_mode = 0
+mouse_filter = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 12 )
+enabled_focus_mode = 0
+text = "Reset"
+
+[connection signal="pressed" from="VBC/HBC/Edit" to="." method="_on_Edit_pressed"]
+[connection signal="pressed" from="VBC/HBC/Done" to="." method="_on_Done_pressed"]
+[connection signal="pressed" from="VBC/HBC/Reset" to="." method="_on_Reset_pressed"]
